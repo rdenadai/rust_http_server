@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'rust_http_server'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rust_http_server",
+                    "--package=rust_http_server"
+                ],
+                "filter": {
+                    "name": "rust_http_server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}/target/debug"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rust_http_server'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rust_http_server",
+                    "--package=rust_http_server"
+                ],
+                "filter": {
+                    "name": "rust_http_server",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}/target/debug"
+        }
+    ]
+}
